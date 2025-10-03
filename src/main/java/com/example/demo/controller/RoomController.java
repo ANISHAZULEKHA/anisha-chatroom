@@ -12,7 +12,7 @@ public class RoomController {
 
     @GetMapping("/")
     public String index() {
-        return "index"; // Form to enter room key and username
+        return "chat"; // Form to enter room key and username
     }
 
     @PostMapping("/join")
