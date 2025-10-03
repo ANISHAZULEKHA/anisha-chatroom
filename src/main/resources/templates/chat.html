@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+   <title>Group Chat</title>
+   <link rel="stylesheet" href="/css/chat.css">
+</head><body>
+   <form id="entry-form" onsubmit="joinRoom(event)">
+       <input type="text" id="username" placeholder="Your name" required>
+       <input type="text" id="roomKey" placeholder="Room key" required>
+       <button type="submit">Join Room</button>
+   </form>
+   <div id="chat-ui" style="display:none;">
+       <div id="chat-box"></div>
+       <input type="text" id="message" placeholder="Type a message...">
+       <button onclick="sendMessage()">Send</button>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+   <script src="/js/chat.js"></script>
+</body>
+</html>
